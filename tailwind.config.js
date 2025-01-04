@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend:{
+      fontFamily:{
+        main:["Montserrat-Regular"]
+      },
       colors: {
         netural: "#f7f7f7",
         mainBg:"#b9b9b9",
@@ -27,9 +30,14 @@ module.exports = {
         "500" : "500px",
       },
       fontSize:{
+        "heading-lg" : "1.6rem",
         "heading" : "1.2rem",
-        "text" : "1rem",
-        "button" : "1rem",
+        "subheading-lg": "1rem",
+        "subheading" : "0.6rem",
+        "text-lg" : "1rem",
+        "text":"0.8rem",
+        "button-lg" : "1rem",
+        "button":"0.8rem",
       }
     },
   },
