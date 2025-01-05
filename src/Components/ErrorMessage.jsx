@@ -1,7 +1,7 @@
 function ErrorMessage(props) {
     return (
         //highlight for changing the text
-        <p className="text-[1.1rem] lg:text-[1.4rem] font-extrabold text-center pt-1.5 animate-pulse">
+        <p className="text-[1.1rem] lg:text-[1.4rem] font-extrabold text-center pt-1.5 animate-ping">
             {props.props.content}
         </p>
     )

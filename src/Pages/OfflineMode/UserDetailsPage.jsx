@@ -7,7 +7,7 @@ import SubHeading from "../../Components/SubHeading";
 import {useNavigate} from "react-router-dom";
 import userDetailsError from "../../Scripts/UserDetailsError";
 import ErrorMessage from "../../Components/ErrorMessage";
-import GameArena from "./Pages/OfflineMode/GameArea"
+import GameArea from "./GameArea";
 
 function UserDetailsPage(props) {
     const [isOpen, setIsOpen] = useState(false);
@@ -44,7 +44,7 @@ function UserDetailsPage(props) {
             setTimeout(() => {
                 clearInterval(timeHelper);
                 setTime("loading...!")
-                navigate(`PlayerArena/${symbol}/${difficulty}`)
+                navigate(`/offlineMode/GameArena/${symbol}/${difficulty}`);
             }, 3000);
         }else{
             setErrorFlag(true)
@@ -140,6 +140,7 @@ function UserDetailsPage(props) {
                         <div className={"flex justify-center items-center"}>
                             <Button props={{content: "Start" , clickFunction : startGame}}/>
                         </div>
+
                         {
                             errorFlag ? <ErrorMessage props={{content : "Input Missing"}}> </ErrorMessage> : null
                         }
