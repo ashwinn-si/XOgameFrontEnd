@@ -1,6 +1,6 @@
 import evaluateChoice from "./HelperMinMax";
 
-let winPosition = [
+let winPosition = [     //indices of winning patterns
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
@@ -10,7 +10,7 @@ let winPosition = [
     [0, 4, 8],
     [2, 4, 6]
 ]
-let ai = ''
+let ai = ''         //to denote ai's symbol
 let human = ''
 function main(board, playerSymbol, difficulty) {
 
@@ -28,7 +28,7 @@ function main(board, playerSymbol, difficulty) {
     }
     return aiMove(board, difficulty, playerSymbol);
 }
-function checkWinner(board, isSimulated = false) {
+function checkWinner(board) {
     for (let i = 0; i < winPosition.length; i++) {
         let [posA, posB, posC] = winPosition[i];
 
@@ -36,22 +36,14 @@ function checkWinner(board, isSimulated = false) {
             continue;
         }
         if (board[posA] === board[posB] && board[posB] === board[posC]) {
-            // if (!isSimulated) {
-            //     // Update the real board if this is not a simulation
-            //     // gameOver = true;
-            // }
             return board[posA];
         }
     }
     return false; // no winner found
 }
 
-function checkTie(board, isSimulated = false) {  // similar flag of checkWinner method
+function checkTie(board) {  
     if (board.includes('')) return false;       // game cannot have ended in a tie, when there's an empty cell
-
-    // if (!isSimulated) {
-    //     gameOver = true;
-    // }
     return true;
 }
 
@@ -99,12 +91,12 @@ function findMoves(board) {
 }
 
 function minimax(board, depth, isMax) {
-    let winner = checkWinner(board, true);  // check if this simulated board has a winner
+    let winner = checkWinner(board);  // check if this simulated board has a winner
     if (winner === ai) return 10 - depth;   // subtracting depth, so that the best move is obtained in least number of steps
 
     if (winner === human) return -10 + depth;
 
-    if (checkTie(board, true)) {
+    if (checkTie(board)) {
         return 0;   // neutral score if the game ends in a tie
     }
 
