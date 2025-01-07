@@ -21,8 +21,8 @@ const FeedbackDropDown = forwardRef((props, ref ) => {
             <label htmlFor="options" className="text-xl font-semibold w-[50%] text-center">{props.props.title}</label>
             <div className="w-[50%] flex items-center justify-evenly">
                 <select id="options" value={selectedOption} onChange={handleSelectChange}
-                        className="  -translate-x-[3px] -translate-y-[3px] border-borderColor shadow-[3px_3px_0_#000000] px-2 py-1 border-black border bg-white"
-                        defaultValue={selectedOption}>
+                        className="  -translate-x-[3px] -translate-y-[3px] border-borderColor shadow-[3px_3px_0_#000000] px-2 py-1 border-black border-[3px] bg-white "
+                        >
                     <option value="5">5</option>
                     <option value="4">4</option>
                     <option value="3">3</option>

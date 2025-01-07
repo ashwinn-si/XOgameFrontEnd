@@ -15,7 +15,7 @@ function EndPage() {
         navigate("/")
     }
     function handleFeedBack(){
-        navigate("/offlineMode/FeedBack");
+        navigate("/FeedBack");
     }
     return (
         <Container>

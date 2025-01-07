@@ -1,5 +1,33 @@
 import evaluateChoice from "./HelperMinMax";
 
+let winPosition = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+]
+let ai = ''
+let human = ''
+function main(board, playerSymbol, difficulty) {
+
+    ai = (playerSymbol === 'O')? 'X' : 'O';
+    human = playerSymbol;
+
+    let winner = checkWinner(board);
+    if(winner === playerSymbol) {
+        return "Player";
+    }else if(winner === ai) {
+        return "Computer";
+    }
+    if(checkTie(board)){
+        return "Tie";
+    }
+    return aiMove(board, difficulty, playerSymbol);
+}
 function checkWinner(board, isSimulated = false) {
     for (let i = 0; i < winPosition.length; i++) {
         let [posA, posB, posC] = winPosition[i];
@@ -8,10 +36,10 @@ function checkWinner(board, isSimulated = false) {
             continue;
         }
         if (board[posA] === board[posB] && board[posB] === board[posC]) {
-            if (!isSimulated) {
-                // Update the real board if this is not a simulation
-                gameOver = true;
-            }
+            // if (!isSimulated) {
+            //     // Update the real board if this is not a simulation
+            //     // gameOver = true;
+            // }
             return board[posA];
         }
     }
@@ -21,9 +49,9 @@ function checkWinner(board, isSimulated = false) {
 function checkTie(board, isSimulated = false) {  // similar flag of checkWinner method
     if (board.includes('')) return false;       // game cannot have ended in a tie, when there's an empty cell
 
-    if (!isSimulated) {
-        gameOver = true;
-    }
+    // if (!isSimulated) {
+    //     gameOver = true;
+    // }
     return true;
 }
 
@@ -40,8 +68,6 @@ function getRemainingMoves(board) {
 
 function aiMove(board, currentDifficulty) {
     // implements minimax algorithm
-    return new Promise(resolve => {
-        setTimeout(() => {
             let aiIndex = '';                    // hold the cellIndex, in which AI will make its move
             let choiceList = findMoves(board);   // choiceList will have three possible moves that depend upon difficulty chosen.
             //[hard, medium, easy]
@@ -53,9 +79,8 @@ function aiMove(board, currentDifficulty) {
             } else {
                 aiIndex = choiceList[0];
             }
-            resolve(aiIndex);
-        }, 750); // Add a delay for more natural play
-    });
+            return (aiIndex);
+
 }
 
 function findMoves(board) {
@@ -65,9 +90,8 @@ function findMoves(board) {
 
     for (let index of legalMoves) {
         board[index] = ai;  // Simulate AI's move
-        let thisMove = minimax(board, 0, false);  // Evaluate the move
-
-        cellScore[index] = thisMove;             // store the score for this simulated move
+          // Evaluate the move
+        cellScore[index] = minimax(board, 0, false);             // store the score for this simulated move
         board[index] = ''; // Undo the move
     }
     cellScore = evaluateChoice(cellScore);            // get the top 3 moves of all possible moves
@@ -109,4 +133,4 @@ function minimax(board, depth, isMax) {
     }
 }
 
-export default aiMove;
+export default main;

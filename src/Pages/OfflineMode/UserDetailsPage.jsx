@@ -74,7 +74,7 @@ function UserDetailsPage(props) {
                                         onClick={(e) => setSymbol("X")}
                                     />
                                     <div
-                                        className="px-[5px] py-[2.5px] lg:px-[10px] lg:py-[5px] text-button lg:text-button-lg mt-[10px] border-[3px] border-borderColor shadow-[3px_3px_0_#000000] font-[750] bg-primarybtn transition-all duration-300 ease-in-out cursor-pointer hover:translate-x-[1.5px] hover:translate-y-[1.5px] hover:shadow-[1.5px_1.5px_0_#000000] hover:bg-primarybtnHover active:translate-x-[3px] active:translate-y-[3px] active:shadow-[0_0_0_#000000] peer-checked:bg-primarybtnHover peer-checked:border-black peer-checked:shadow-[1.5px_1.5px_0_#000000]">
+                                        className="px-[5px] py-[2.5px] lg:px-[10px] lg:py-[5px] text-button font-[500] lg:text-button-lg mt-[10px] border-[3px] border-borderColor shadow-[3px_3px_0_#000000]  bg-primarybtn transition-all duration-300 ease-in-out cursor-pointer hover:translate-x-[1.5px] hover:translate-y-[1.5px] hover:shadow-[1.5px_1.5px_0_#000000] hover:bg-primarybtnHover active:translate-x-[3px] active:translate-y-[3px] active:shadow-[0_0_0_#000000] peer-checked:bg-white peer-checked:border-black  peer-checked:font-black peer-checked:shadow-[1.5px_1.5px_0_#000000]">
                                         <p className="lg:text-2xl text-xl">X</p>
                                     </div>
                                 </label>
@@ -89,7 +89,7 @@ function UserDetailsPage(props) {
                                     />
 
                                     <div
-                                        className="px-[5px] py-[2.5px] lg:px-[10px] lg:py-[5px] text-button lg:text-button-lg mt-[10px] border-[3px] border-borderColor shadow-[3px_3px_0_#000000] font-[750] bg-primarybtn transition-all duration-300 ease-in-out cursor-pointer hover:translate-x-[1.5px] hover:translate-y-[1.5px] hover:shadow-[1.5px_1.5px_0_#000000] hover:bg-primarybtnHover active:translate-x-[3px] active:translate-y-[3px] active:shadow-[0_0_0_#000000] peer-checked:bg-primarybtnHover peer-checked:border-black peer-checked:shadow-[1.5px_1.5px_0_#000000]">
+                                        className="px-[5px] py-[2.5px] lg:px-[10px] lg:py-[5px] text-button lg:text-button-lg mt-[10px] border-[3px] border-borderColor shadow-[3px_3px_0_#000000] font-[500] bg-primarybtn transition-all duration-300 ease-in-out cursor-pointer hover:translate-x-[1.5px] hover:translate-y-[1.5px] hover:shadow-[1.5px_1.5px_0_#000000] hover:bg-primarybtnHover active:translate-x-[3px] active:translate-y-[3px] active:shadow-[0_0_0_#000000] peer-checked:bg-white peer-checked:border-black  peer-checked:font-black peer-checked:shadow-[1.5px_1.5px_0_#000000]">
                                         <p className="lg:text-2xl text-xl">O</p>
                                     </div>
                                 </label>
@@ -130,7 +130,7 @@ function UserDetailsPage(props) {
                                                 value="Hard"
                                                 onClick={(e) => handleClick(e)}
                                             >
-                                                Hard
+                                                Impossible
                                             </li>
                                         </ul>
                                     </div>

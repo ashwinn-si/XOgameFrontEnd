@@ -9,7 +9,7 @@ function HomePage() {
         navigate("/offlineMode/UserDetailsPage");
     }
     function onlineModeClick(){
-        navigate("/onlineMode/home");
+        navigate("/onlineMode/Home");
     }
     return(
             <Container>

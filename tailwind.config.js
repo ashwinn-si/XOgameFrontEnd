@@ -12,14 +12,16 @@ module.exports = {
         netural: "#f7f7f7",
         mainBg:"#b9b9b9",
         borderColor: "#1f2937",
-        highlighting:"#fef08a",
+        highlighting:"#ff9501",
         success: "#10b981",
         loss:"#FF6347",
         error:"#ef4444",
         warning:"#f97316",
         primarybtn:"#b9b9b9",
         primarybtnHover:"#949494",
-        primarybtnActive:"#6B7280"
+        primarybtnActive:"#6B7280",
+        Xcolor:"#EF4444",
+        Ocolor:"#3B82F6"
       },
       width : {
         "300" : "300px",
