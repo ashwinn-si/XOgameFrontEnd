@@ -1,6 +1,6 @@
 function SubHeading(props) {
     return (
-        <p className="text-[1.1rem] lg:text-[1.4rem] font-extrabold text-center">
+        <p className="m-1 text-[1.1rem] lg:text-[1.4rem] font-extrabold text-center">
             {props.props.content}
         </p>
     )

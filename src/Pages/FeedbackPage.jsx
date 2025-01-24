@@ -16,6 +16,7 @@ function FeedbackPage() {
         setSelectedOption(event.target.value); // Update state when option changes
     };
     const navigate = useNavigate();
+    const API_URL = "http://localhost:5000";
 
     const [userFeedBack , setUserFeedback] = useState([useRef() , useRef() , useRef() , useRef()]);
     async function handleSubmit() {
@@ -24,7 +25,7 @@ function FeedbackPage() {
             data.push(element.current.getData());
         })
         setFeedbackStatus("waiting")
-        fetch("http://localhost:5000/feedback", {
+        fetch(`${API_URL}/feedback`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

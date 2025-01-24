@@ -23,7 +23,6 @@ function checkWinner(board,PlayerSymbol , CmpSymbol) {
                 return"Computer"
             }
         }
-
     }
     let isTie = checkTie(board);
     if(isTie){
@@ -37,9 +36,6 @@ function checkWinner(board,PlayerSymbol , CmpSymbol) {
 function checkTie(board) {  // similar flag of checkWinner method
     if (board.includes('')) return false;       // game cannot have ended in a tie, when there's an empty cell
 
-    // if (!isSimulated) {
-    //     gameOver = true;
-    // }
     return true;
 }
 
