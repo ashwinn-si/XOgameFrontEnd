@@ -16,7 +16,7 @@ function FeedbackPage() {
         setSelectedOption(event.target.value); // Update state when option changes
     };
     const navigate = useNavigate();
-    const API_URL = "http://localhost:5000";
+    const API_URL = "https://xogamebackend.onrender.com";
 
     const [userFeedBack , setUserFeedback] = useState([useRef() , useRef() , useRef() , useRef()]);
     async function handleSubmit() {

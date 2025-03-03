@@ -1,6 +1,6 @@
 import {io} from "socket.io-client";
 
-const backendURL = `http://localhost:5000`;
+const backendURL = `https://xogamebackend.onrender.com`;
 
 const socket = io.connect(backendURL, {
     autoConnect: false,
